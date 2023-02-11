@@ -1,5 +1,6 @@
-import Header from "../components/Header";
 import {useState} from "react";
+
+import AppLayout from '/components/section/AppLayout'
 
 
 export default function Home() {
@@ -13,9 +14,7 @@ export default function Home() {
 
   return (
     <>
-      <Header sampleString="react"/>
-      <div>welcome next.js</div>
-        <button onClick={handleClick}>{likes}</button>
+      <AppLayout />
     </>
   )
 }
