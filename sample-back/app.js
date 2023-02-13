@@ -1,13 +1,11 @@
 const express = require('express');
 const app = express();
 const port = 3001;
+const morgan = require('morgan');
 
 const router = require('./routes/index');
 
-// app.get('/', (req, res) => {
-//   res.send('Hello world');
-// });
-
+app.use(morgan('[:date] :status :method :url :response-time ms   // :remote-addr'));
 app.use(router);
 
 app.listen(port, () => {
